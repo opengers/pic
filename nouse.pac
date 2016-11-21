@@ -8,8 +8,8 @@ var FindProxyForURL = function(init, profiles) {
         } while (typeof result !== "string" || result.charCodeAt(0) === 43);
         return result;
     };
-}("+\u81ea\u52a8\u5207\u6362", {
-    "+\u81ea\u52a8\u5207\u6362": function(url, host, scheme) {
+}("+proxy_pac", {
+    "+proxy_pac": function(url, host, scheme) {
         "use strict";
         if (/(?:^|\.)sourceforge\.net$/.test(host)) return "+VPN";
         if (/(?:^|\.)github\.com$/.test(host)) return "+VPN";
@@ -57,9 +57,9 @@ var FindProxyForURL = function(init, profiles) {
         if (/(?:^|\.)virt-manager\.org$/.test(host)) return "+VPN";
         if (/(?:^|\.)wikipedia\.org$/.test(host)) return "+VPN";
         if (/(?:^|\.)wireshark\.org$/.test(host)) return "+VPN";
-        return "+__ruleListOf_\u81ea\u52a8\u5207\u6362";
+        return "+__ruleListOf_proxy_pac";
     },
-    "+__ruleListOf_\u81ea\u52a8\u5207\u6362": function(url, host, scheme) {
+    "+__ruleListOf_proxy_pac": function(url, host, scheme) {
         "use strict";
         if (/^http:\/\/blog\.ontrac\.com/.test(url)) return "DIRECT";
         if (/^http:\/\/store\.sprite\.org/.test(url)) return "DIRECT";
