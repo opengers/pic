@@ -17,6 +17,6 @@ var FindProxyForURL = function(init, profiles) {
     "+VPN": function(url, host, scheme) {
         "use strict";
         if (host === "127.0.0.1" || host === "::1" || host.indexOf(".") < 0) return "DIRECT";
-        return "SOCKS5 127.0.0.1:9001";
+        return "SOCKS5 127.0.0.1:9901";
     },
 });
